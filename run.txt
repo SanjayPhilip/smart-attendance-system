@@ -1,0 +1,13 @@
+cd C:\Personal\projects\smart-attendance-system
+venv\Scripts\activate
+cd backend
+python app.py
+
+
+
+new terminl:
+
+cd C:\Personal\projects\smart-attendance-system\frontend
+npm run dev
+
+http://localhost:5173
