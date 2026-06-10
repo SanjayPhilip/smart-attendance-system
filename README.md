@@ -12,7 +12,6 @@ An AI-powered Smart Attendance System that automates attendance management using
 
 ## 📸 Screenshots
 
-Add screenshots inside the `screenshots/` folder and update the paths below.
 
 ### Dashboard
 
