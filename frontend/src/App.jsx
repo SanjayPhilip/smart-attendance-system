@@ -44,7 +44,7 @@ export default function App() {
             ))}
           </nav>
           <div className="p-4 border-t border-indigo-700 text-indigo-400 text-xs">
-            Backend: localhost:5000
+            Backend: Railway Cloud API
           </div>
         </aside>
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { Camera, Upload, CheckCircle, XCircle } from 'lucide-react'
 
-const API = 'http://localhost:5000'
+const API = 'https://industrious-heart-production-5a4e.up.railway.app'
 
 export default function MarkAttendance() {
   const [file, setFile] = useState(null)

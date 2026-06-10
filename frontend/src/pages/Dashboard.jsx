@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Users, CheckCircle, CalendarDays, TrendingUp } from 'lucide-react'
 
-const API = 'http://localhost:5000'
-
+const API = 'https://industrious-heart-production-5a4e.up.railway.app'
 function StatCard({ icon: Icon, label, value, color }) {
   return (
     <div className="bg-white rounded-xl shadow p-6 flex items-center gap-4">

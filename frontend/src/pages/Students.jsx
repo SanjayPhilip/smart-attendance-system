@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { UserPlus, Trash2, User } from 'lucide-react'
 
-const API = 'http://localhost:5000'
+const API = 'https://industrious-heart-production-5a4e.up.railway.app'
 
 export default function Students() {
   const [students, setStudents] = useState([])
