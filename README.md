@@ -1,123 +1,219 @@
-# Smart Attendance System
+# 🎓 Smart Attendance System
 
-A full-stack AI-powered attendance management system leveraging **face recognition** for real-time student tracking and automated attendance logging.
+An AI-powered Smart Attendance System that automates attendance management using facial recognition, computer vision, and a modern web dashboard.
 
-## ✨ Features
+## 🌐 Live Demo
 
-- 🎯 **Face Recognition Attendance** – Real-time detection using OpenCV + dlib
-- 👤 **Student Management** – Registration with photo capture
-- 📊 **Dashboard Analytics** – Attendance summaries and visualizations
-- 📈 **Reports** – Generate and export attendance records (CSV)
-- 🎥 **Live Camera Feed** – Real-time detection with bounding boxes
-- 📱 **Responsive UI** – Works across devices
-- 💾 **Persistent Storage** – SQLite database with query support
+**Frontend:** https://smart-attendance-system-six-sigma.vercel.app/
 
-## 🛠️ Tech Stack
-
-| Layer | Technologies |
-|-------|--------------|
-| **Frontend** | React, Vite, Tailwind CSS, React Router, Lucide Icons |
-| **Backend** | Flask, SQLAlchemy, Flask-CORS |
-| **ML/CV** | OpenCV, face_recognition, dlib |
-| **Database** | SQLite |
-
-## 📁 Project Structure
-
-```
-smart-attendance-system/
-├── backend/
-│   ├── app.py
-│   ├── models.py
-│   ├── requirements.txt
-│   └── database.db
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
-├── screenshots/
-├── .gitignore
-└── README.md
-```
-
-## 🚀 Quick Start
-
-### Backend
-
-```bash
-cd backend
-pip install -r requirements.txt
-python app.py
-```
-Server runs on `http://localhost:5000`
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-App runs on `http://localhost:5173`
-
-## 📸 Screenshots
-
-| Feature | Screenshot |
-|---------|-----------|
-| Dashboard | ![dashboard](screenshots/dashboard.png) |
-| Student Registration | ![students](screenshots/students.png) |
-| Attendance Marking | ![attendance](screenshots/attendance.png) |
-| Reports | ![reports](screenshots/reports.png) |
-
-## 🔧 Usage
-
-### 1. Register Students
-- Go to **Students** → Add new student
-- Capture 3-5 face images for training
-- System learns face encoding
-
-### 2. Mark Attendance
-- Go to **Attendance** → Start Camera
-- Face detection automatically marks present/absent
-- Real-time feedback on detection accuracy
-
-### 3. View Reports
-- **Dashboard** shows daily/weekly stats
-- **Reports** page allows filtering by date/class
-- Export to CSV for records
-
-## 🎯 Key Achievements
-
-- Face recognition accuracy: **~95%** (tested on dataset)
-- Real-time detection: **<100ms** per frame
-- Handles up to **50 concurrent student faces**
-- CORS-enabled for cross-origin requests
-
-## 🚢 Deployment
-
-- **Frontend**: [Vercel](https://vercel.com/)
-- **Backend**: [Render](https://render.com/) or [Railway](https://railway.app/)
-
-## 📝 Future Enhancements
-
-- [ ] Dark mode
-- [ ] Attendance analytics charts (Chart.js)
-- [ ] Excel export with formatting
-- [ ] Telegram/Email notifications
-- [ ] Mobile app (React Native)
-- [ ] Role-based access (Admin/Teacher/Student)
-- [ ] Multi-class support
-
-## 📄 License
-
-This project is open source and available under the **MIT License**.
-
-## 👨‍💻 Author
-
-**Sanjay Philip**  
-Full Stack & ML Developer | Final Year MCA Student  
-[Portfolio](https://portfolio-qd4a.vercel.app) | [GitHub](https://github.com/SanjayPhilip)
+**Backend API:** https://industrious-heart-production-5a4e.up.railway.app/
 
 ---
 
-**Questions?** Open an issue or reach out!
+## 📸 Screenshots
+
+Add screenshots inside the `screenshots/` folder and update the paths below.
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Student Management
+
+![Students](screenshots/students.png)
+
+### Attendance Marking
+
+![Attendance](screenshots/attendance.png)
+
+### Reports
+
+![Reports](screenshots/reports.png)
+
+---
+
+## 🚀 Features
+
+* Student Registration & Management
+* Attendance Tracking
+* Attendance Reports & Analytics
+* Dashboard Statistics
+* Face Recognition-Based Attendance
+* RESTful Flask API
+* Responsive React Frontend
+* SQLite Database Integration
+* CORS Enabled Backend
+* Cloud Deployment Support
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* JavaScript
+* CSS
+
+### Backend
+
+* Flask
+* Flask-SQLAlchemy
+* Flask-CORS
+
+### Computer Vision
+
+* OpenCV
+* face_recognition
+* dlib
+
+### Database
+
+* SQLite
+
+### Deployment
+
+* Vercel (Frontend)
+* Railway (Backend)
+
+---
+
+## 📂 Project Structure
+
+```text
+smart-attendance-system/
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── backend/
+│   ├── app.py
+│   ├── face_utils.py
+│   ├── attendance.db
+│   ├── requirements.txt
+│   └── dataset/
+│
+├── screenshots/
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Local Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/SanjayPhilip/smart-attendance-system.git
+cd smart-attendance-system
+```
+
+---
+
+### Backend Setup
+
+```bash
+cd backend
+
+pip install -r requirements.txt
+
+python app.py
+```
+
+Backend runs on:
+
+```text
+http://localhost:5000
+```
+
+---
+
+### Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend runs on:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## API Endpoints
+
+### Students
+
+```http
+GET /students
+POST /students
+DELETE /students/<id>
+```
+
+### Attendance
+
+```http
+POST /attendance/mark
+GET /attendance
+GET /attendance/report
+```
+
+### Dashboard
+
+```http
+GET /dashboard/stats
+```
+
+---
+
+## Deployment Notes
+
+The cloud deployment runs in a compatibility mode due to platform limitations with graphical dependencies required by dlib/OpenCV.
+
+Face recognition functionality is fully supported in local deployment environments.
+
+---
+
+## Resume Highlights
+
+* Developed a full-stack attendance management platform using React and Flask.
+* Built REST APIs for student and attendance management.
+* Implemented attendance analytics and reporting features.
+* Integrated computer vision and facial recognition technologies.
+* Deployed production-ready frontend and backend services using Vercel and Railway.
+
+---
+
+## Future Improvements
+
+* Admin Authentication
+* Role-Based Access Control
+* Cloud Database (PostgreSQL)
+* Excel/CSV Export
+* Mobile Responsive UI Enhancements
+* Real-Time Webcam Attendance
+* Dark Mode
+* Advanced Analytics Dashboard
+
+---
+
+## Author
+
+### Sanjay Philip
+
+Full-Stack Developer • Machine Learning Enthusiast
+
+* GitHub: https://github.com/SanjayPhilip
+* LinkedIn: Add your LinkedIn URL here
+
+⭐ If you found this project useful, consider giving it a star.
