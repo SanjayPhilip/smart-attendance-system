@@ -1,7 +1,7 @@
 flask
 flask-sqlalchemy
 flask-cors
-opencv-python
+opencv-python-headless==4.13.0.92
 face_recognition
 numpy
 Pillow

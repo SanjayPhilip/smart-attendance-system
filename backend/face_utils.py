@@ -1,12 +1,11 @@
 import numpy as np
-import cv2
 import os
 
 try:
-    import face_recognition
-    FACE_RECOGNITION_AVAILABLE = True
+    import cv2
+    CV2_AVAILABLE = True
 except Exception:
-    FACE_RECOGNITION_AVAILABLE = False
+    CV2_AVAILABLE = False
 
 
 def encode_face_from_path(image_path):
@@ -30,7 +29,7 @@ def encode_face_from_path(image_path):
 def encode_face_from_bytes(image_bytes):
     """Decode an image from bytes and return its face encodings."""
 
-    if not FACE_RECOGNITION_AVAILABLE:
+    if not CV2_AVAILABLE:
         return [], []
 
     nparr = np.frombuffer(image_bytes, np.uint8)
@@ -85,7 +84,7 @@ def draw_boxes_on_image(image_bytes, face_locations, labels):
     nparr = np.frombuffer(image_bytes, np.uint8)
     image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
-    if image is None:
+    if not CV2_AVAILABLE:
         return image_bytes
 
     for (top, right, bottom, left), label in zip(face_locations, labels):
